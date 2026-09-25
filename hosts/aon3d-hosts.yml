@@ -3,22 +3,84 @@ method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
 summary:
-  hosts: 1
-  own: 0
+  hosts: 5
+  own: 4
   other_domain: 0
   platform: 1
   roles:
+  - api
+  - other
+  - portal
+  - source
   - website
 hosts:
-- host: www.nasdaqprivatemarket.com
+- host: api.aon3d.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: aon3d.com
+  role: api
+  relation: own
+- host: docs.aon3d.com
   found_by:
   - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Documentation
+  - DeveloperPortal
+  - APIReference
+  serves:
+  - docs
+  registrable_domain: aon3d.com
+  role: portal
+  relation: own
+- host: explore.aon3d.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aon3d.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: www.aon3d.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
   - vendor-detect
   types:
+  - Newsroom
   - Website
+  - GettingStarted
+  - Support
+  - Blog
+  - TermsOfService
+  - PrivacyPolicy
   serves:
+  - docs
   - cdn
-  vendor: fastly
-  registrable_domain: nasdaqprivatemarket.com
+  - hosting
+  vendor: cloudflare
+  registrable_domain: aon3d.com
   role: website
-  relation: platform
+  relation: own

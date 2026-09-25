@@ -1,38 +1,37 @@
 aid: aon3d
-
 name: AON3D
-
-description: 'AON3D provides industrial additive manufacturing solutions, offering high‑temperature 3D printers such as Hylo™ and Basis™, a range of advanced materials including carbon‑fiber PEEK, ULTEM™ and PEKK, and software tools for print preparation. The company serves aerospace, defense, and manufacturing sectors, delivering turnkey hardware, material science resources, and consulting services through its website.'
-
+image: https://www.aon3d.com/wp-content/uploads/2023/09/Hylo-URL-Preview.jpg
+description: AON3D provides industrial additive manufacturing solutions, offering high‑temperature 3D printers such as Hylo™ and Basis™, a range
+  of advanced materials including carbon‑fiber PEEK, ULTEM™ and PEKK, and software tools for print preparation. The company serves aerospace,
+  defense, and manufacturing sectors, delivering turnkey hardware, material science resources, and consulting services through its website.
 url: https://raw.githubusercontent.com/api-evangelist/aon3d/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:secondary-market
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-25'
-
 modified: '2026-09-25'
-
 tags:
 - Company
 - Additive Manufacturing
 - 3D Printing
 - Industrial Solutions
 - Materials
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: GitHubOrganization
+  url: https://github.com/aon3d
+- type: ChangeLog
+  url: changelog/aon3d-changelog.yml
+- type: Newsroom
+  url: https://www.aon3d.com/category/press/
+- type: Documentation
+  url: https://docs.aon3d.com/
 - type: Hosts
   url: hosts/aon3d-hosts.yml
 - type: Vendors
@@ -40,12 +39,38 @@ common:
 - type: DomainSecurity
   url: security/aon3d-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
-
-apis: []
+  url: https://www.aon3d.com/
+- type: GettingStarted
+  url: https://www.aon3d.com/get-quote/
+- type: Support
+  url: https://www.aon3d.com/contact/
+- type: Blog
+  url: https://www.aon3d.com/category/blog/
+- type: TermsOfService
+  url: https://www.aon3d.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.aon3d.com/privacy-policy
+- type: DeveloperPortal
+  url: https://docs.aon3d.com/
+- type: APIReference
+  url: https://docs.aon3d.com/
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation site https://docs.aon3d.com/ returns HTML shells and no machine‑readable spec despite probing common OpenAPI paths.
+  evidence:
+  - url: https://docs.aon3d.com/openapi.json
+    status: 404
+  checked: 2026-09-25/
+apis:
+- name: AON3D API
+  description: API documentation for AON3D 3D printers and services, as listed in the developer docs.
+  humanURL: https://docs.aon3d.com/
+  baseURL: null
+  aid: aon3d:aon3d-api
 x-enrichment:
   date: '2026-09-25'
   status: enriched
-  artifacts_added: 4
+  artifacts_added: 2
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local

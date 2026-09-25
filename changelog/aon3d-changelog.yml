@@ -1,0 +1,27 @@
+generated: '2026-09-25'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.aon3d.com/m2/slicers_and_codes/superslicer/superslicer_changelogs/
+sources:
+- https://docs.aon3d.com/m2/slicers_and_codes/superslicer/superslicer_changelogs/
+entries:
+- breaking: false
+  highlights:
+  - 'Release Date: October 2023'
+  - 'New material added: Tectonic3D TenneT PI'
+  date: 2023-10-01T00:00:00Z? Actually page only says October 2023; use as given? Use string as is.
+- breaking: false
+  highlights:
+  - 'Release Date: October 2023'
+  - Added commands to cool the bed and chamber at the end of a print
+  - Improved print settings for soluble and breakaway supports
+  - 'New materials added: Jabil PA 0600, Jabil PA 4500, Victrex AM™ 200'
+  date: '2023-10-01T00:00:00Z'
+- breaking: false
+  highlights:
+  - 'Release Date: July 12th, 2023'
+  - Initial release.
+  date: '2023-07-12'
+current_version: '1.2'
+note: Versioning scheme uses simple numeric versions (e.g., 1.0, 1.1, 1.2).
+docs: https://docs.aon3d.com/m2/slicers_and_codes/superslicer/superslicer_changelogs/
